@@ -6,7 +6,8 @@
 
 <ul>
 	{% for pizza in pizzas %}
-	<li>{{pizza}} </li>
+	<li><a href ="{% url 'pizzas:pizza' pizza.id %}"> {{pizza}}
+	</li>
 	{% empty %}
 	<li>No pizzas are available right now. </li>
 	{% endfor %}

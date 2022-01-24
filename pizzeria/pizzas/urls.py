@@ -11,6 +11,6 @@ urlpatterns =[
 	#Page that shows all pizza options.
 	path('pizzas/', views.pizzas, name='pizzas'),
 	#Detail page for a single pizza.
-	path ('pizzas/<int:topioc_id>/', views.topic, name = 'topic'),
+	path ('pizzas/<int:pizza_id>/', views.pizza, name = 'pizza'),
 	]
 

@@ -8,5 +8,9 @@ app_name = 'pizzas'
 urlpatterns =[
 	#Home page
 	path('', views.index, name= 'index'),
+	#Page that shows all pizza options.
+	path('pizzas/', views.pizzas, name='pizzas'),
+	#Detail page for a single pizza.
+	path ('pizzas/<int:topioc_id>/', views.topic, name = 'topic'),
 	]
 

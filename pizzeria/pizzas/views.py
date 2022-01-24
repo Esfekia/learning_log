@@ -14,7 +14,7 @@ def pizzas(request):
 
 def pizza(request, pizza_id):
 	"""Show a single pizza and all its toppings."""
-	pizza = Pizza.objects.get(id=pizza_id)
-	toppings = pizza.topping_set.order_by('-date_added')
-	context = {'pizza':pizza,'toppings': toppings}
+	p = Pizza.objects.get(id=pizza_id)
+	toppings = p.topping_set.all()
+	context = {'pizza':p,'toppings': toppings}
 	return render(request, 'pizzas/pizza.html', context)
